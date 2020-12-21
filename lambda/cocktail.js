@@ -24,7 +24,7 @@ module.exports.USER_AGENT = USER_AGENT;
 function listOfIngredients(ingredients) {
 	let list = "";
 
-    for (i in ingredients) {
+    for (let i in ingredients) {
         if (i < ingredients.length-1) {
             list += ingredients[i];
             list += ", ";
