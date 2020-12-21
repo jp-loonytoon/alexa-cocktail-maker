@@ -11,11 +11,12 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome, you can say Hello or Help. Which would you like to try?';
+        const speakOutput = 'Hi! What cocktail would you like to make?';
+        const repromptOutput = 'Please tell me the name of the cocktail you want to mix.';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt(speakOutput)
+            .reprompt(repromptOutput)
             .getResponse();
     }
 };
