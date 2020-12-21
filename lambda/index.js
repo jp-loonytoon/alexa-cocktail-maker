@@ -8,6 +8,7 @@ const cocktail = require("./cocktails.js");
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
+        console.log("In LaunchRequestHandler");
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
