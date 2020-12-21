@@ -4,6 +4,7 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require('ask-sdk-core');
+const cocktail = require("./cocktails.js");
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -19,18 +20,35 @@ const LaunchRequestHandler = {
     }
 };
 
-const HelloWorldIntentHandler = {
+const MakeCocktailIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'HelloWorldIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'MakeCocktailIntent';
     },
-    handle(handlerInput) {
-        const speakOutput = 'Hello World!';
-
-        return handlerInput.responseBuilder
-            .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-            .getResponse();
+    async handle(handlerInput) {
+        let speakOutput = '';
+        const r = handlerInput.requestEnvelope;
+        const cocktailName = Alexa.getSlotValue(r, 'cocktail');
+        
+        return new Promise((resolve, reject) => {
+            cocktail.speakCocktailInfo(cocktailName)
+                .then((speechOutput) => {
+                    console.log(speechOutput);
+                    resolve(
+                        handlerInput.responseBuilder
+                        .speak(speechOutput)
+                        .getResponse()
+                    );
+                })
+                .catch((error) => {
+                    console.log(`ERROR: ${error}`);
+                    resolve(
+                        handlerInput.responseBuilder
+                        .speak(error)
+                        .getResponse()
+                    );
+                });
+        }); 
     }
 };
 
