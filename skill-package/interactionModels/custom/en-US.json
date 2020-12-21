@@ -1,0 +1,51 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "cocktail maker",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "MakeCocktailIntent",
+          "slots": [
+            {
+              "name": "cocktail",
+              "type": "AMAZON.Drink"
+            }
+          ],
+          "samples": [
+            "Can you explain how to mix a {cocktail}",
+            "Explain how to mix a {cocktail}",
+            "How do you make a {cocktail}",
+            "How do I make a {cocktail}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "4"
+}

@@ -1,0 +1,28 @@
+# Bespoken test script for Cocktail Maker skill
+#
+# Find more info on https://read.bespoken.io/unit-testing/getting-started/
+---
+configuration:
+  description: Cocktail Maker unit test suite
+  locale: en-US
+  
+# Test 1: we can launch the skill
+---
+- test: Launch and the skill
+- LaunchRequest:
+  - prompt: Hi! What cocktail would you like to make?
+  - exit
+
+# Test 2.1: simple request for a cocktail (single word)
+---
+- test: Ask how to make a Margarita
+- LaunchRequest # Empty expected part means we are not testing the response
+- MakeCocktailIntent cocktail=Margarita:
+  - prompt:
+    - OK, you need: Tequila, Triple sec, Lime juice, and Salt. Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.
+  - exit
+
+---
+- test: Stop intent
+- LaunchRequest
+- AMAZON.StopIntent: Goodbye!
