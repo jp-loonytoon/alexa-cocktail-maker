@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Amazon Alexa",
+  "author": "James Page",
   "license": "Apache License",
   "dependencies": {
     "ask-sdk-core": "^2.7.0",

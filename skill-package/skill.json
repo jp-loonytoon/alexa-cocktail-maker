@@ -32,15 +32,15 @@
       "isAvailableWorldwide": true,
       "locales": {
         "en-US": {
-          "description": "Sample Full Description",
+          "description": "Find out how to make popular cocktails by following simple instructions. Enjoy!",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open cocktail maker",
+            "How do you make a gin an tonic?",
+            "Can you explain how to mix a mojito?"
           ],
           "keywords": [],
-          "name": "CocktailMaker",
-          "summary": "Sample Short Description"
+          "name": "Cocktail Maker",
+          "summary": "Find out how to make popular cocktails"
         }
       },
       "testingInstructions": "Sample Testing Instructions."
