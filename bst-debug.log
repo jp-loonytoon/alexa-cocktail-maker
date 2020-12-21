@@ -214,3 +214,17 @@
     at Object.next (/usr/local/lib/node_modules/bespoken-tools/node_modules/skill-testing-ml/node_modules/virtual-alexa/lib/src/impl/SkillInteractor.js:13:53)
     at /usr/local/lib/node_modules/bespoken-tools/node_modules/skill-testing-ml/node_modules/virtual-alexa/lib/src/impl/SkillInteractor.js:7:71
     at new Promise (<anonymous>)
+2020-12-21T22:22:09.203Z error: bst-test            Error using bst-test on Node: v12.18.3
+2020-12-21T22:22:09.207Z error: bst-test            YAMLException: end of the stream or a document separator is expected at line 25, column 1:
+    how do you make a gin and tonic
+    ^
+    at generateError (/usr/local/lib/node_modules/bespoken-tools/node_modules/js-yaml-bespoken/lib/js-yaml/loader.js:191:10)
+    at throwError (/usr/local/lib/node_modules/bespoken-tools/node_modules/js-yaml-bespoken/lib/js-yaml/loader.js:197:9)
+    at readDocument (/usr/local/lib/node_modules/bespoken-tools/node_modules/js-yaml-bespoken/lib/js-yaml/loader.js:1558:5)
+    at loadDocuments (/usr/local/lib/node_modules/bespoken-tools/node_modules/js-yaml-bespoken/lib/js-yaml/loader.js:1594:5)
+    at Object.loadAll (/usr/local/lib/node_modules/bespoken-tools/node_modules/js-yaml-bespoken/lib/js-yaml/loader.js:1602:19)
+    at TestParser.parse (/usr/local/lib/node_modules/bespoken-tools/node_modules/skill-testing-ml/dist/lib/test/TestParser.js:156:30)
+    at TestRunner.parseContents (/usr/local/lib/node_modules/bespoken-tools/node_modules/skill-testing-ml/dist/lib/runner/TestRunner.js:586:26)
+    at /usr/local/lib/node_modules/bespoken-tools/node_modules/skill-testing-ml/dist/lib/runner/TestRunner.js:74:39
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/usr/local/lib/node_modules/bespoken-tools/node_modules/skill-testing-ml/dist/lib/runner/TestRunner.js:1:192)
