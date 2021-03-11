@@ -2,4 +2,4 @@ lambda/node_modules
 .ask/
 ask-resources.json
 
-test_output/report/
+test_output/

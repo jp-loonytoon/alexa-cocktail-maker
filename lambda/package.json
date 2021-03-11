@@ -1,13 +1,13 @@
 {
   "name": "cocktail-maker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A skill to advise on how to make cocktails",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "James Page",
-  "license": "Apache License",
+  "license": "Apache-2.0",
   "dependencies": {
     "ask-sdk-core": "^2.7.0",
     "ask-sdk-model": "^1.19.0",
