@@ -18,3 +18,13 @@ Currently it uses an Alexa hosted skill with the following details:
 
 * Skill Name: Cocktail Maker
 * Invocation Name: cocktail maker
+
+## Testing
+
+You can test locally by running [Bespoken](https://read.bespoken.io/unit-testing/getting-started/):
+
+```bash
+bst test
+```
+
+This uses the fixtures defined in `test`.
