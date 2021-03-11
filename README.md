@@ -28,3 +28,17 @@ bst test
 ```
 
 This uses the fixtures defined in `test`.
+
+You can also use the Amazon Alexa `ask` tool to setup a test interactive session like this:
+
+```bash
+ask dialog
+```
+
+Then initiate a conversation like this:
+
+```bash
+User  > open cocktail maker
+Alexa > Hi! What cocktail would you like to make?
+User  > How do you make a mojito
+```
