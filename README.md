@@ -17,11 +17,14 @@ A. OK, you need: Tequila, Triple sec, Lime juice, and Salt. Rub the rim of the g
 Currently it uses an Alexa hosted skill with the following details:
 
 * Skill Name: Cocktail Maker
-* Invocation Name: cocktail maker
+* Invocation Name: `cocktail maker`
+* *Alexa Skill ID: `amzn1.ask.skill.7337c451-d15b-4a32-a47c-b1fdc3706eca`.
+
+![Architecture](architecture.png)
 
 ### Rapid API Key
 
-A Rapid API key is required to for access to Cocktail DB API. You can sign up for a key from: https://rapidapi.com/thecocktaildb/api/the-cocktail-db. The key needs to go into the `config.json` file in the `lambda` directory. It should have read-access permissions only. 
+A Rapid API key is required to for access to Cocktail DB API. You can sign up for a key from: https://rapidapi.com/thecocktaildb/api/the-cocktail-db. The key needs to go into the `config.json` file in the `lambda` directory. It should have read-access permissions only.
 
 ## Testing
 
@@ -39,7 +42,7 @@ If you look in the `test-output/report` directory you'll see an `index.inline.ht
 
 ![Bespoken test report](bst-test-report.png)
 
-You can then use the Amazon Alexa `ask` tool to setup a test interactive session like this:
+You can then use the Amazon Alexa `ask` tool to setup a test interactive session from your local environment like this:
 
 ```bash
 ask dialog
@@ -48,7 +51,17 @@ ask dialog
 Then initiate a conversation like this:
 
 ```bash
-User  > open cocktail maker
+User  > Alexa, open Cocktail Maker.
 Alexa > Hi! What cocktail would you like to make?
-User  > How do you make a mojito
+User  > Tell me how to make a Long Island Tea.
+Alexa > OK, you need: Vodka, Light rum, Gin, Tequila, Lemon, and Coca-Cola. Combine all ingredients (except cola) and pour over ice in a highball glass. Add the splash of cola for color. Decorate with a slice of lemon and serve.
 ```
+
+## Deployment to Amazon
+
+To deploy to the Amazon Alexa hosted (development) environment you simply do a `git push` to of your master branch. You can then test the status of the skill like this:
+
+```bash
+ask smapi get-skill-status -s amzn1.ask.skill.7337c451-d15b-4a32-a47c-b1fdc3706eca
+```
+
