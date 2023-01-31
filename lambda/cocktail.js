@@ -124,7 +124,7 @@ function speakCocktailInfo(name) {
 		getCocktailInfo(name)
 			.then((cocktailInfo) => {
 				if (cocktailInfo.id > 0) {
-					spokenResponse = `OK, you need: `;
+					spokenResponse = `OK, you will need: `;
 					spokenResponse += listOfIngredients(cocktailInfo.ingredients);
 					spokenResponse += cocktailInfo.instructions;
 				} else {
